@@ -35,7 +35,7 @@ def main():
     if st.button("Run"):
         output, error = run_command(command)
         st.session_state.history.append({"command": command, "output": output, "error": error})
-        st.experimental_rerun()
+        st.rerun()
 
     # Mostrar el historial de comandos
     st.subheader("Command History")
